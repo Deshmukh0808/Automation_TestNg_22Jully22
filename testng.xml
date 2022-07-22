@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/Automation_TestNg_Latest/Automation_TestNg">
+        <classes>
+            <class name="com.qa.App.test.HomePageTest">
+                <methods>
+                    <include name="verifyLoginPageTitleTest"/>
+                    <include name="homePageTitleTest"/>
+                    <include name="contactpageValidateSuccessfulSubmissionofContactForm"/>
+                    <include name="ValidateCartItems"/>
+                    <include name="contactpageValidateErrorTest"/>
+                    <include name="ValidateCartTotal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
