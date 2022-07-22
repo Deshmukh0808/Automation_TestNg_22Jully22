@@ -31,6 +31,7 @@ public class HomePage extends BasePage {
 	private By EmailError = By.id("email-err");
 	private By Message = By.id("message");
 	private By MessageError = By.id("message-err");
+	//private By SubmissionSuccessfulMessage = By.xpath("//div[@class='alert alert-success']");
 	private By SubmissionSuccessfulMessage = By.xpath("//div[@class='alert alert-success']");
 	private By FunnyCowbuy = By.xpath("(//h4[contains(text(),'Funny Cow')]//following::a)[1]");
 	private By FluffyBunnybuy = By.xpath("(//h4[contains(text(),'Fluffy Bunny')]//following::a)[1]");
@@ -142,7 +143,7 @@ public class HomePage extends BasePage {
 	public boolean VerifyFormSubmittedSuccessfully()
 	{
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -206,6 +207,12 @@ public class HomePage extends BasePage {
 	}
 	public void VerifyCartSubtotals(double subtotal1, double subtotal2, double subtotal3)
 	{
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Double Total = subtotal1+subtotal2+subtotal3;
 		String firstcartitemsubtotal = driver.findElement(FirstCartItemSubtotal).getText();
 		String secondcartitemsubtotal = driver.findElement(SecondCartItemSubtotal).getText();
